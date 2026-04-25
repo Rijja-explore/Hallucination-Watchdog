@@ -59,7 +59,8 @@ def save_prompt_record(
     action: str,
     risk_score: int,
     explanation: str,
-    metadata: dict = None
+    metadata: dict = None,
+    upstreamErrors: str = None
 ) -> int:
     """
     Save a prompt record to persistent storage.
@@ -84,7 +85,8 @@ def save_prompt_record(
             "action": action,
             "risk_score": risk_score,
             "explanation": explanation,
-            "metadata": metadata or {}
+            "metadata": metadata or {},
+            "upstreamErrors": upstreamErrors
         }
 
         _prompt_records[record_id] = record

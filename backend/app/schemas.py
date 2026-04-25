@@ -245,4 +245,5 @@ class PromptRecord(BaseModel):
     risk_score: int
     explanation: str
     metadata: Optional[Dict] = None
+    upstreamErrors: Optional[str] = None
 
